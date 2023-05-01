@@ -8,15 +8,19 @@
 //% color="#AA278D" weight=100
 namespace hello {
     //% block
-    export function helloWorld() {
-        led.plot(4, 3)
+    export function plotAt(index: number): void {
+        index |= 0
+        const y = Math.floor(index/5)
+        const x = Math.floor(index%5)
+        led.plot(x,y)
     }
 
     // note that Caml casing yields lower case
     // block text with spaces
 
     //% block
-    export function camlCaseTwo() {
+    export function plotled() {
+        led.plot(4,3)
 
     }
 }
